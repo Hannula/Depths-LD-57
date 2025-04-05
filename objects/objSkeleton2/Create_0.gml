@@ -1,13 +1,14 @@
 event_inherited();
 
 xpNeeded = 10;
-xpGiven = 1;
+xpGiven = 2;
+nextLevelCharacter = objSkeleton3;
 
-hp = 15;
-maxHp = 15;
-hpPrevious = 15;
+hp = 9;
+maxHp = 9;
+hpPrevious = 9;
 
-spd = 0.4;
+spd = 0.3;
 
 knockbackMultiplier = 1.0;
 friction = 0.1;
@@ -22,7 +23,7 @@ attackCooldown = 60;
 canAttackTimer = 60;
 attackChance = 60;
 attackObject = objAttack;
-attackDmg = 2.5;
+attackDmg = 3;
 attackRange = 30;
 attackSpeed = 3.1;
 attackSpread = 10;

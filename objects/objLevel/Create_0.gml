@@ -73,7 +73,7 @@ OpenShop = function()
 	if (levelPhase != LEVEL_PHASE.Cleared)
 		return;
 		
-	var items = 4;
+	var items = 5;
 	var gap = 60;
 	var leftX = room_width * 0.5 - items * 0.5 * gap + gap * 0.5;
 	for(var i = 0; i < items; i++)
@@ -82,7 +82,7 @@ OpenShop = function()
 	}
 	for(var i = 0; i < items; i++)
 	{
-		var itemType = objShopButton;
+		var itemType = choose(objShopButtonSkeleton2, objShopButtonSkeleton3);
 		if (i == items - 1)
 		{
 			itemType = objShopButtonInvest;

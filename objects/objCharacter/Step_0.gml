@@ -120,6 +120,15 @@ if (xp >= xpNeeded && nextLevelCharacter != undefined)
 {
 	var c = instance_create_depth(x, y, depth, nextLevelCharacter);
 	c.team = team;
+	c.xp += xp - xpNeeded;
+	repeat(6)
+	{
+		var spark = instance_create_depth(x + random_range(-10, 10), y + random_range(-10, 10), -100, objSparkle); 
+		spark.speed = random_range(2, 4);
+		spark.friction = 0.15;
+		spark.direction = random(360);
+	}
+	audio_play_sound(sndLevelUp, 0.5, false);
 	instance_destroy();
 }
 	

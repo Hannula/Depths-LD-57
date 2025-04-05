@@ -1,17 +1,15 @@
 event_inherited();
 
-xpNeeded = 5;
-xp = 0;
-xpGiven = 1;
-nextLevelCharacter = objSkeleton2;
+xpNeeded = 10;
+xpGiven = 3;
 
-hp = 5;
-maxHp = 5;
-hpPrevious = 5;
+hp = 15;
+maxHp = 15;
+hpPrevious = 15;
 
 spd = 0.3;
 
-knockbackMultiplier = 1.0;
+knockbackMultiplier = 0.9;
 friction = 0.1;
 
 team = TEAM.Enemy;
@@ -24,22 +22,22 @@ attackCooldown = 60;
 canAttackTimer = 60;
 attackChance = 60;
 attackObject = objAttack;
-attackDmg = 1;
+attackDmg = 5;
 attackRange = 30;
 attackSpeed = 3.1;
 attackSpread = 10;
-attackKnockback = 1.2;
+attackKnockback = 1.4;
 attackSound = sndAttack;
 
 drawHealth = true;
-hpBarWidth = 3;
+hpBarWidth = 5;
 hpBarHeight = 19;
 drawHp = 0;
 
 bloodAmount = 5;
 bloodColor = #7b234c;
 
-pushedChance = 5;
+pushedChance = 8;
 pushAmount = 0.5;
 
 goldAmount = 1;

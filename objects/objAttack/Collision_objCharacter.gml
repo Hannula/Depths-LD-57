@@ -7,4 +7,5 @@ if (other.team != team && !array_contains(hitCharacters, other.id))
 	{
 		creator.xp += other.xpGiven;
 	}
+	dmg *= 0.5;
 }

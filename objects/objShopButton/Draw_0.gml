@@ -8,8 +8,9 @@ if (objLevel.gold < cost)
 	draw_set_color(#7e659b);
 }
 draw_set_font(fntPixeltype);
-
-DrawTextShadow(x, y + 8, name);
+draw_set_valign(fa_bottom);
+DrawTextShadow(x, y + 16, name);
+draw_set_valign(fa_top);
 draw_set_color(#e1a845);
 var goldW = sprite_get_width(sprGoldIcon) + 2;
 var w = goldW + string_width(string(cost));
