@@ -1,0 +1,1 @@
+other.TakeDamage(10);
