@@ -2,7 +2,6 @@ event_inherited();
 
 xpNeeded = 12;
 xpGiven = 4;
-nextLevelCharacter = objLizard3;
 
 hp = 30;
 maxHp = 30;

@@ -1,3 +1,16 @@
+enum BIOME
+{
+	Cavern,
+	Crypt,
+	Labyrinth,
+	Swamp,
+	Inferno,
+	DragonsLair,
+	TreasureRoom
+}
+
+currentBiome = BIOME.Crypt;
+
 movingScreen = false;
 clickSafeBuffer = 60;
 
@@ -7,7 +20,7 @@ goldPitch = 0;
 goldTimer = 0;
 totalGoldCollected = 0;
 difficulty = 1;
-finalLevelDifficulty = 50;
+finalLevelDifficulty = 30;
 
 firepower = 2;
 
@@ -45,7 +58,8 @@ enum LEVEL_PHASE
 	Cleared,
 	Shopping,
 	ScreenMoving,
-	GameOver
+	GameOver,
+	PayingDebt
 }
 
 StartBattle = function()
@@ -73,30 +87,10 @@ OpenShop = function()
 {
 	if (levelPhase != LEVEL_PHASE.Cleared)
 		return;
-		
-	var items = 5;
-	var gap = 60;
-	var leftX = room_width * 0.5 - items * 0.5 * gap + gap * 0.5;
-	for(var i = 0; i < items; i++)
+	
+	if (currentBiome == BIOME.Crypt)
 	{
-		var itemType = choose(objShopButton, objShopButtonMinotaur1, objShopButtonGoblin1, objShopButtonArcher1, objShopButtonLizard1, objShopButtonBatilisk1, objShopButtonBogslium1);
-		var item = instance_create_depth(leftX + i * gap, 60, -1000, itemType);
-	}
-	for(var i = 0; i < items; i++)
-	{
-		var itemType = choose(objShopButtonSkeleton2, objShopButtonSkeleton3, objShopButtonMinotaur2, objShopButtonMinotaur3, 
-		objShopButtonGoblin2, objShopButtonGoblin3, objShopButtonArcher2, objShopButtonArcher3,
-		objShopButtonLizard2, objShopButtonLizard3, objShopButtonBatilisk2, objShopButtonBatilisk3,
-		objShopButtonBogslium2, objShopButtonBogslium3);
-		if (i == items - 1)
-		{
-			itemType = objShopButtonInvest;
-		}
-		if (i == items - 2)
-		{
-			itemType = objShopButtonFirepower;
-		}
-		var item = instance_create_depth(leftX + i * gap, 110, -1000, itemType);
+		SpawnShopCrypt();		
 	}
 	
 	levelPhase = LEVEL_PHASE.Shopping;
@@ -116,6 +110,11 @@ EndGame = function()
 
 SpawnNextRoom = function()
 {
+	if (currentBiome == BIOME.Crypt)
+	{
+		GenerateCrypt();
+		return;
+	}
 	GenerateLevel();
 }
 

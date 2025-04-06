@@ -15,6 +15,14 @@ hp = 3;
 
 TakeDamage = function()
 {
+	if (instance_exists(objDragon) && hp > 0)
+	{
+		canBeHurt = false;
+		hp = 0;
+		hurtFlash = 15;	
+		audio_play_sound(sndPlayerHurt, 0.8, false, 1, 0, random_range(0.9, 1.1));
+		return;		
+	}
 	if (!canBeHurt)
 		return;
 	hp -= 1;

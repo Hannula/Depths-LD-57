@@ -20,22 +20,65 @@ if (levelPhase == LEVEL_PHASE.Prepare)
 	}
 }
 
+if (levelPhase == LEVEL_PHASE.PayingDebt)
+{
+	draw_set_font(fntPixellari);
+	draw_set_alpha(1);
+	draw_set_halign(fa_center);
+	draw_set_color(#e5efef);
+	DrawTextShadow(room_width * 0.5, 60, "PAY YOUR DEBT!");
+	if ((round(current_time * 0.003) mod 6) != 1)
+	{
+		draw_set_font(fntPixeltype);
+		DrawTextShadow(room_width * 0.5, 75, "Click here to pay.");
+	}
+	
+	if (clickSafeBuffer <= 0 && mouse_check_button_pressed(mb_left) && mouse_y > 60)
+	{
+		totalGoldCollected += 100000;
+		with(objGoldPile)
+		{
+			alarm[0] = irandom_range(5, 120);
+		}
+		levelPhase = LEVEL_PHASE.Cleared;
+		audio_play_sound(sndSelect, 1, false);
+		clickSafeBuffer = 60;
+	}
+}
+
 if (levelPhase == LEVEL_PHASE.Cleared)
 {
 	draw_set_font(fntPixellari);
 	draw_set_alpha(1);
 	draw_set_halign(fa_center);
 	draw_set_color(#e1a845);
-	DrawTextShadow(room_width * 0.5, largeTextY, "THE BATTLE IS OVER!");
+	var text = "THE BATTLE IS OVER!";
+	if (difficulty == finalLevelDifficulty + 1)
+	{
+		text = "CONGRATULATIONS! THE DEBT IS PAID!";
+	}
+	DrawTextShadow(room_width * 0.5, largeTextY, text);
 	if ((round(current_time * 0.003) mod 6) != 1)
 	{
+		text = "Click here to continue.";
+		if (difficulty == finalLevelDifficulty + 1)
+		{
+			text = "Click here to continue adventuring!";
+		}
 		draw_set_font(fntPixeltype);
-		DrawTextShadow(room_width * 0.5, smallTextY, "Click here to continue.");
+		DrawTextShadow(room_width * 0.5, smallTextY, text);
 	}
 	
 	if (clickSafeBuffer <= 0 && mouse_check_button_pressed(mb_left) && mouse_y > largeTextY)
 	{
-		OpenShop();	
+		if (difficulty == finalLevelDifficulty)
+		{
+			MoveScreen();
+		}
+		else
+		{
+			OpenShop();
+		}
 	}
 }
 
@@ -94,5 +137,9 @@ DrawTextShadow(18, 9, string(gold));
 draw_sprite(sprIconFirepower, 0, 10, 22);
 draw_set_color(#63c4cc);
 DrawTextShadow(18, 21, string(firepower));
+
+draw_set_halign(fa_right);
+draw_set_color(#e1a845);
+DrawTextShadow(room_width - 9, 9, "Level " + string(difficulty) + "/" + string(finalLevelDifficulty));
 
 draw_sprite(sprCursor, cursorImage, mouse_x, mouse_y);

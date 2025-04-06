@@ -11,6 +11,17 @@ if (keyboard_check(vk_control))
 		objWizard.TakeDamage();
 	}
 	
+	if (keyboard_check_pressed(ord("K")))
+	{
+		with(objCharacter)
+		{
+			if (team == TEAM.Enemy)
+			{
+				TakeDamage(1000);
+			}
+		}
+	}
+	
 
 	if (keyboard_check_pressed(ord("N")))
 	{

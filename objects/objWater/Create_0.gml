@@ -30,6 +30,6 @@ if (random(1) < 0.35)
 {
 	if (y > 0 && !place_meeting(x, y - 16, objWater))
 	{
-		instance_create_depth(x, y - 16, depth, objLava);
+		instance_create_depth(x, y - 16, depth, objWater);
 	}
 }

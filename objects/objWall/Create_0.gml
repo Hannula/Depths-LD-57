@@ -8,9 +8,12 @@ image_index = irandom(1000);
 hp = 1;
 gold = 0;
 
+hurtTimer = 0;
+
 TakeDamage = function(dmg)
 {
 	hp -= dmg;
+	hurtTimer = 4;
 	
 	if (hp <= 0)
 	{

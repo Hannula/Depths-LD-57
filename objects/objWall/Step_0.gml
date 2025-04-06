@@ -6,3 +6,8 @@ if (random(300) < gold)
 }
 
 depth = -y;
+
+if (hurtTimer > 0)
+{
+	hurtTimer -= 1;	
+}

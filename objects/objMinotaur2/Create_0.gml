@@ -1,6 +1,6 @@
 event_inherited();
 
-xpNeeded = 20;
+xpNeeded = 15;
 xpGiven = 4;
 nextLevelCharacter = objMinotaur3;
 

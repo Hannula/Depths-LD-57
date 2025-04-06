@@ -1,14 +1,25 @@
 function GenerateLevel()
 {
-	if (objLevel.difficulty > 6 && irandom(2) == 1)
+	if (objLevel.currentBiome == BIOME.Inferno)
 	{
-		GenerateLava(irandom(objLevel.difficulty - 6));
+		GenerateLava(irandom_range(2, 6));
+	}
+	else if (objLevel.currentBiome == BIOME.Cavern)
+	{
+		if (objLevel.difficulty > 6 && irandom(4) == 1)
+		{
+			GenerateLava(irandom(4));
+		}
+		else if (objLevel.difficulty > 3)
+		{
+			GenerateWater(irandom(5));
+		}
+	}
+	else if (objLevel.currentBiome == BIOME.Swamp)
+	{
+		GenerateWater(irandom_range(3, 7));
+	}
 	
-	}
-	if (objLevel.difficulty > 3)
-	{
-		GenerateWater(irandom(5));
-	}
 	
 	var cellSize = 16;
 	for(var xx = 0; xx <= room_width; xx += cellSize)
@@ -38,7 +49,26 @@ function GenerateLevel()
 			}
 		}
 	}
-	SpawnEnemies();
+	if (objLevel.difficulty == objLevel.finalLevelDifficulty +1)
+	{
+		repeat(50)
+		{
+			var xx = irandom(room_width / cellSize);
+			var yy = irandom_range(3, room_height / cellSize);
+	
+			var spawnX = xx * cellSize;
+			var spawnY = yy * cellSize + objLevel.roomHeight;
+			if (!collision_point(spawnX, spawnY, objEntity, false, true))
+			{
+				instance_create_depth(spawnX, spawnY, 0, objGoldPile);
+			}
+		}
+	}
+	else
+	{
+		SpawnEnemies();
+	}
+	
 }
 
 function GenerateLava(amount)
@@ -131,5 +161,10 @@ function SpawnEnemies()
 			yy = random_range(80, 120) + roomHeight;
 		}
 		
+	}
+	
+	if (objLevel.difficulty == objLevel.finalLevelDifficulty)
+	{
+		instance_create_depth(room_width * 0.5, objLevel.roomHeight + 160, 0, objDragon);	
 	}
 }

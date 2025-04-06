@@ -13,7 +13,11 @@ if (movingScreen)
 	else
 	{
 		levelPhase = LEVEL_PHASE.Prepare;
-		movingScreen = false;	
+		movingScreen = false;
+		if (difficulty == finalLevelDifficulty + 1)
+		{
+			levelPhase = LEVEL_PHASE.PayingDebt;
+		}
 	}
 }
 var enemyExists = false;

@@ -4,9 +4,9 @@ xpNeeded = 8;
 xpGiven = 2;
 nextLevelCharacter = objBogslium2;
 
-hp = 40;
-maxHp = 40;
-hpPrevious = 40;
+hp = 15;
+maxHp = 15;
+hpPrevious = 15;
 
 waterSpeed = 0.5;
 lavaSpeed = 0.5;
