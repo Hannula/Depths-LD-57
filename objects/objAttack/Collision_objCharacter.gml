@@ -7,5 +7,10 @@ if (other.team != team && !array_contains(hitCharacters, other.id))
 	{
 		creator.xp += other.xpGiven;
 	}
-	dmg *= 0.5;
+	dmg *= damageReduction;
+	
+	if (dmg < 0.25)
+	{
+		instance_destroy();	
+	}
 }

@@ -3,15 +3,15 @@ smallTextY = room_height * 0.9;
 
 if (levelPhase == LEVEL_PHASE.Prepare)
 {
+	draw_set_font(fntPixellari);
+	draw_set_alpha(1);
+	draw_set_halign(fa_center);
+	draw_set_color(#e1a845);
+	DrawTextShadow(room_width * 0.5, largeTextY, "POSITION YOUR ARMY!");
 	if ((round(current_time * 0.003) mod 6) != 1)
 	{
-		draw_set_font(fntPixellari);
-		draw_set_alpha(1);
-		draw_set_halign(fa_center);
-		draw_set_color(#e1a845);
-		DrawTextShadow(room_width * 0.5, largeTextY, "PREPARE FOR BATTLE!");
 		draw_set_font(fntPixeltype);
-		DrawTextShadow(room_width * 0.5, smallTextY, "Click here to begin.");
+		DrawTextShadow(room_width * 0.5, smallTextY, "Click here to begin battle.");
 	}
 	
 	if (clickSafeBuffer <= 0 && mouse_check_button_pressed(mb_left) && mouse_y > largeTextY)
@@ -22,13 +22,13 @@ if (levelPhase == LEVEL_PHASE.Prepare)
 
 if (levelPhase == LEVEL_PHASE.Cleared)
 {
+	draw_set_font(fntPixellari);
+	draw_set_alpha(1);
+	draw_set_halign(fa_center);
+	draw_set_color(#e1a845);
+	DrawTextShadow(room_width * 0.5, largeTextY, "THE BATTLE IS OVER!");
 	if ((round(current_time * 0.003) mod 6) != 1)
 	{
-		draw_set_font(fntPixellari);
-		draw_set_alpha(1);
-		draw_set_halign(fa_center);
-		draw_set_color(#e1a845);
-		DrawTextShadow(room_width * 0.5, largeTextY, "THE BATTLE IS OVER!");
 		draw_set_font(fntPixeltype);
 		DrawTextShadow(room_width * 0.5, smallTextY, "Click here to continue.");
 	}
@@ -41,15 +41,17 @@ if (levelPhase == LEVEL_PHASE.Cleared)
 
 if (levelPhase == LEVEL_PHASE.Shopping)
 {
+	draw_set_alpha(0.5);
+	draw_rectangle_color(0, 0, room_width, room_height, #2f193e, #2f193e, #2f193e, #2f193e, false);
+	draw_set_font(fntPixellari);
+	draw_set_alpha(1);
+	draw_set_halign(fa_center);
+	draw_set_color(#e1a845);
+	DrawTextShadow(room_width * 0.5, largeTextY, "SPEND GOLD TO SUMMON UNITS!");
 	if ((round(current_time * 0.003) mod 6) != 1)
 	{
-		draw_set_font(fntPixellari);
-		draw_set_alpha(1);
-		draw_set_halign(fa_center);
-		draw_set_color(#e1a845);
-		DrawTextShadow(room_width * 0.5, largeTextY, "SPEND GOLD TO SUMMON UNITS!");
 		draw_set_font(fntPixeltype);
-		DrawTextShadow(room_width * 0.5, smallTextY, "Click here to got to the next room.");
+		DrawTextShadow(room_width * 0.5, smallTextY, "Click here to finish summoning.");
 	}
 	
 	if (clickSafeBuffer <= 0 && mouse_check_button_pressed(mb_left) && mouse_y > largeTextY)
@@ -60,15 +62,20 @@ if (levelPhase == LEVEL_PHASE.Shopping)
 
 if (levelPhase == LEVEL_PHASE.GameOver && !instance_exists(objWizard))
 {
+	draw_set_alpha(0.5);
+	draw_rectangle_color(0, 0, room_width, room_height, c_black, c_black, c_black, c_black, false);
+	draw_set_font(fntPixellari);
+	draw_set_alpha(1);
+	draw_set_halign(fa_center);
+	draw_set_color(#e1a845);
+	DrawTextShadow(room_width * 0.5, room_height * 0.3, "GAME OVER!");
+	draw_set_font(fntPixeltype);
+	DrawTextShadow(room_width * 0.5, room_height * 0.45, "Level Reached: " + string(difficulty) + "/" + string(finalLevelDifficulty));
+	DrawTextShadow(room_width * 0.5, room_height * 0.5, "Gold Collected: " + string(totalGoldCollected));
+	
 	if ((round(current_time * 0.003) mod 6) != 1)
-	{
-		draw_set_font(fntPixellari);
-		draw_set_alpha(1);
-		draw_set_halign(fa_center);
-		draw_set_color(#e1a845);
-		DrawTextShadow(room_width * 0.5, room_height * 0.4, "GAME OVER!");
-		draw_set_font(fntPixeltype);
-		DrawTextShadow(room_width * 0.5, room_height * 0.5, "Click anywhere to restart game.");
+	{		
+		DrawTextShadow(room_width * 0.5, room_height * 0.65, "Click anywhere to restart game.");
 	}
 	
 	if (clickSafeBuffer <= 0 && mouse_check_button_pressed(mb_left))

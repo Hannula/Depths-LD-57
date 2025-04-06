@@ -26,7 +26,9 @@ if (objLevel.levelPhase != LEVEL_PHASE.Battle && objLevel.levelPhase != LEVEL_PH
 	}
 }
 
-if (objLevel.levelPhase == LEVEL_PHASE.ScreenMoving)
+if (objLevel.levelPhase != LEVEL_PHASE.Shopping && objLevel.levelPhase != LEVEL_PHASE.Prepare)
 {
 	canBeCollected = true;	
 }
+
+depth = -y + 3;

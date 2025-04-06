@@ -5,10 +5,11 @@ gold = 0;
 goldPitch = 0;
 
 goldTimer = 0;
-
+totalGoldCollected = 0;
 difficulty = 1;
+finalLevelDifficulty = 50;
 
-firepower = 3;
+firepower = 2;
 
 MoveScreen = function()
 {
@@ -78,11 +79,15 @@ OpenShop = function()
 	var leftX = room_width * 0.5 - items * 0.5 * gap + gap * 0.5;
 	for(var i = 0; i < items; i++)
 	{
-		var item = instance_create_depth(leftX + i * gap, 60, -1000, objShopButton);
+		var itemType = choose(objShopButton, objShopButtonMinotaur1, objShopButtonGoblin1, objShopButtonArcher1, objShopButtonLizard1, objShopButtonBatilisk1, objShopButtonBogslium1);
+		var item = instance_create_depth(leftX + i * gap, 60, -1000, itemType);
 	}
 	for(var i = 0; i < items; i++)
 	{
-		var itemType = choose(objShopButtonSkeleton2, objShopButtonSkeleton3);
+		var itemType = choose(objShopButtonSkeleton2, objShopButtonSkeleton3, objShopButtonMinotaur2, objShopButtonMinotaur3, 
+		objShopButtonGoblin2, objShopButtonGoblin3, objShopButtonArcher2, objShopButtonArcher3,
+		objShopButtonLizard2, objShopButtonLizard3, objShopButtonBatilisk2, objShopButtonBatilisk3,
+		objShopButtonBogslium2, objShopButtonBogslium3);
 		if (i == items - 1)
 		{
 			itemType = objShopButtonInvest;
@@ -112,24 +117,6 @@ EndGame = function()
 SpawnNextRoom = function()
 {
 	GenerateLevel();
-	
-	repeat(power(1 + difficulty, 1.2))
-	{
-		var enemy = objSkeleton1;
-		var xx = random_range(30, room_width - 30);
-		var yy = random_range(80, 170) + roomHeight;
-		repeat(50)
-		{
-			if (!collision_circle(xx, yy, 6, objWall, false, true))
-			{
-				instance_create_depth(xx, yy, 0, enemy);
-				break;
-			}
-			xx = random_range(30, room_width - 30);
-			yy = random_range(80, 120) + roomHeight;
-		}
-		
-	}
 }
 
 cursorImage = 0;
@@ -146,4 +133,6 @@ AddGold = function(amount)
 	goldTimer = 60;
 	goldPitch += 0.01;
 	goldPitch = min(goldPitch, 2.5);
+	
+	totalGoldCollected += amount;
 }

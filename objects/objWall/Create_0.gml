@@ -5,7 +5,7 @@ image_xscale = choose(-1, 1);
 image_speed = 0;
 image_index = irandom(1000);
 
-hp = 3;
+hp = 1;
 gold = 0;
 
 TakeDamage = function(dmg)

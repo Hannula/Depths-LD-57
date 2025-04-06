@@ -5,7 +5,8 @@ icon = sprInvestment;
 name = "Invest";
 
 cost = 30 * objLevel.difficulty;
-amount = cost / 7;
+
+goldAmount = cost * 1.3;
 
 Buy = function()
 {
@@ -16,10 +17,17 @@ Buy = function()
 	objLevel.gold -= cost;
 	if (unit != undefined)
 	{
-		repeat(amount)
+		var goldToGive = goldAmount;
+		var nuggetValue = 10;
+		while(goldToGive > 0)
 		{
 			var g = instance_create_depth(x, y, 0, objGoldNugget);
+			g.amount = nuggetValue;
+			goldToGive -= nuggetValue;
 			g.canBeCollected = false;
+			
+			nuggetValue += 10;
+			nuggetValue = clamp(nuggetValue, 10, ceil(0.1 * goldToGive) * 10);
 		}
 	}
 }

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.277029,
+  "duration":0.0,
   "name":"sndLevelUp",
   "parent":{
     "name":"Sounds",

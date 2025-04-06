@@ -10,12 +10,12 @@
   "name":"objWall",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Environment",
+    "path":"folders/Objects/Environment.yy",
   },
   "parentObjectId":{
-    "name":"objEntity",
-    "path":"objects/objEntity/objEntity.yy",
+    "name":"objObstacleSmartAvoid",
+    "path":"objects/objObstacleSmartAvoid/objObstacleSmartAvoid.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

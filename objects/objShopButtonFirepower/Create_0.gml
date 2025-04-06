@@ -4,7 +4,7 @@ icon = sprIconFirepower;
 
 name = "Spellpower";
 
-cost = objLevel.firepower * 20;
+cost = objLevel.firepower * 50;
 
 Buy = function()
 {
@@ -15,5 +15,5 @@ Buy = function()
 	}
 	objLevel.gold -= cost;
 	objLevel.firepower += 1;
-	cost = objLevel.firepower * 20;
+	cost = objLevel.firepower * 50;
 }

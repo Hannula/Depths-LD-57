@@ -14,3 +14,5 @@ image_yscale = image_xscale;
 friction = 0.1;
 
 canBeCollected = true;
+
+amount = 10;

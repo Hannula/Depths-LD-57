@@ -3,9 +3,9 @@ event_inherited();
 xpNeeded = 10;
 xpGiven = 3;
 
-hp = 15;
-maxHp = 15;
-hpPrevious = 15;
+hp = 18;
+maxHp = 18;
+hpPrevious = 18;
 
 spd = 0.3;
 
@@ -40,4 +40,4 @@ bloodColor = #7b234c;
 pushedChance = 8;
 pushAmount = 0.5;
 
-goldAmount = 1;
+goldAmount = 5;

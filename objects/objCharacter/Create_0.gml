@@ -7,6 +7,14 @@ enum TEAM
 	Enemy
 }
 
+lavaHurtChance = 30;
+inWater = false;
+inLava = false;
+
+waterSpeed = 0.33;
+lavaSpeed = 0.6;
+
+isFlying = false;
 canAct = false;
 
 xpNeeded = 5;
@@ -25,6 +33,10 @@ spd = 0.4;
 target = noone;
 targetX = x;
 targetY = y;
+avoidedObstacle = objObstacleSmartAvoid;
+
+startingX = x;
+startingY = 35;
 
 knockedBack = false;
 knockbackMultiplier = 1.0;
@@ -46,6 +58,8 @@ attackSpeed = 3.3;
 attackSpread = 10;
 attackKnockback = 2;
 attackSound = sndAttack;
+attackSprite = sprAttackSwing;
+attackDamageReduction = 0.5;
 
 deathSound = sndDeath;
 
@@ -116,10 +130,12 @@ Attack = function(dir)
 	attack.team = team;
 	attack.dmg = attackDmg;
 	attack.knockback = attackKnockback;
+	attack.sprite_index = attackSprite;
 	attack.image_angle = dir + random_range(-attackSpread, attackSpread);
 	attack.direction = attack.image_angle;
 	attack.speed = attackSpeed;
 	attack.creator = id;
+	attack.damageReduction = attackDamageReduction;
 	audio_play_sound(attackSound, 0.5, false, 1, 0, random_range(0.9, 1.1));
 }
 
@@ -134,3 +150,5 @@ Die = function()
 goldAmount = 1;
 
 alarm[0] = 1;
+
+alarm[1] = irandom(10);

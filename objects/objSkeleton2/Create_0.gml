@@ -4,9 +4,10 @@ xpNeeded = 10;
 xpGiven = 2;
 nextLevelCharacter = objSkeleton3;
 
-hp = 9;
-maxHp = 9;
-hpPrevious = 9;
+
+hp = 12;
+maxHp = 12;
+hpPrevious = 12;
 
 spd = 0.3;
 
@@ -41,4 +42,4 @@ bloodColor = #7b234c;
 pushedChance = 5;
 pushAmount = 0.5;
 
-goldAmount = 1;
+goldAmount = 3;

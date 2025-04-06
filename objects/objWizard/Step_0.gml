@@ -1,3 +1,5 @@
+depth = -y;
+
 canMove = false;
 
 if (objLevel.levelPhase == LEVEL_PHASE.Battle || objLevel.levelPhase  == LEVEL_PHASE.ScreenMoving)

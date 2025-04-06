@@ -85,8 +85,17 @@ else
 if (instance_exists(grabbedCharacter))
 {
 	cursorImage = 2;
-	grabbedCharacter.x = mouse_x;
-	grabbedCharacter.y = clamp(mouse_y + 8, 10, 30);
+	grabbedCharacter.startingX =  mouse_x;
+	grabbedCharacter.startingY = clamp(mouse_y + 8, 10, 90);
+	with(grabbedCharacter)
+	{
+		if (!place_meeting(startingX, startingY, objWall))
+		{
+			x = startingX;
+			y = startingY;
+		}
+	}
+	
 	
 	if (mouse_check_button_released(mb_left))
 	{
