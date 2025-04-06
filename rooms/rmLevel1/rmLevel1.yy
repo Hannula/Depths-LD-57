@@ -6,6 +6,7 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
+    {"name":"inst_345678E6","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_2566571E","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_2AC54ED2","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_7447E546","path":"rooms/rmLevel1/rmLevel1.yy",},
@@ -89,7 +90,6 @@
     {"name":"inst_7909E124","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_39117498","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_48CF154C","path":"rooms/rmLevel1/rmLevel1.yy",},
-    {"name":"inst_345678E6","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_1D0D8459","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_123A452A","path":"rooms/rmLevel1/rmLevel1.yy",},
     {"name":"inst_142BBA5B","path":"rooms/rmLevel1/rmLevel1.yy",},

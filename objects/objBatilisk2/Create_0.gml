@@ -4,9 +4,9 @@ xpNeeded = 15;
 xpGiven = 3;
 nextLevelCharacter = objBatilisk3;
 
-hp = 10;
-maxHp = 10;
-hpPrevious = 10;
+hp = 16;
+maxHp = hp;
+hpPrevious = hp;
 
 avoidedObstacle = objWall;
 isFlying = true;
@@ -46,4 +46,4 @@ bloodColor = #7b234c;
 pushedChance = 8;
 pushAmount = 0.7;
 
-goldAmount = 3;
+goldAmount = 4;

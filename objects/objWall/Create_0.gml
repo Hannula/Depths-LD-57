@@ -5,7 +5,7 @@ image_xscale = choose(-1, 1);
 image_speed = 0;
 image_index = irandom(1000);
 
-hp = 1;
+hp = 2;
 gold = 0;
 
 hurtTimer = 0;
@@ -17,6 +17,7 @@ TakeDamage = function(dmg)
 	
 	if (hp <= 0)
 	{
+		Destroy();
 		instance_destroy();
 		audio_play_sound(sndRockDestroy, 0.5, false, 1, 0, random_range(0.8, 1));
 		repeat(3)
@@ -31,17 +32,33 @@ TakeDamage = function(dmg)
 	}
 }
 
-if (irandom(150) == 1)
+Destroy = function()
+{
+	
+}
+
+var goldChance = 1;
+if (objLevel.currentBiome == BIOME.Inferno)
+{
+	goldChance = 0.25;
+}
+
+if (objLevel.currentBiome == BIOME.DragonsLair)
+{
+	goldChance = 0.1;
+}
+
+if (irandom(150 * goldChance) == 1)
 {
 	gold = 1;	
 }
 
-if (irandom(25) == 1)
+if (irandom(25 * goldChance) == 1)
 {
 	gold = 2;
 }
 
-if (irandom(40) == 1)
+if (irandom(40 * goldChance) == 1)
 {
 	gold = 3;
 }

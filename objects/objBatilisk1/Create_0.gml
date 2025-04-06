@@ -7,9 +7,9 @@ nextLevelCharacter = objBatilisk2;
 avoidedObstacle = objWall;
 isFlying = true;
 
-hp = 5;
-maxHp = 5;
-hpPrevious = 5;
+hp = 8;
+maxHp = hp;
+hpPrevious = hp;
 
 spd = 0.45;
 

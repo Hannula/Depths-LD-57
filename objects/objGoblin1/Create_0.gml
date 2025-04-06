@@ -4,9 +4,9 @@ xpNeeded = 6;
 xpGiven = 1;
 nextLevelCharacter = objGoblin2;
 
-hp = 2;
-maxHp = 2;
-hpPrevious = 2;
+hp = 5;
+maxHp = hp;
+hpPrevious = hp;
 
 spd = 0.4;
 

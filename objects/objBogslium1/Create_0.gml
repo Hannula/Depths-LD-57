@@ -4,9 +4,9 @@ xpNeeded = 8;
 xpGiven = 2;
 nextLevelCharacter = objBogslium2;
 
-hp = 15;
-maxHp = 15;
-hpPrevious = 15;
+hp = 25;
+maxHp = hp;
+hpPrevious = hp;
 
 waterSpeed = 0.5;
 lavaSpeed = 0.5;
@@ -36,7 +36,7 @@ attackSound = sndShockwave;
 
 
 drawHealth = true;
-hpBarWidth = 12;
+hpBarWidth = 7;
 hpBarHeight = 25;
 drawHp = 0;
 

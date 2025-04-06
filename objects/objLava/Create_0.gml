@@ -7,7 +7,7 @@ if (instance_number(objLava) > 20)
 	exit;
 }
 
-if (random(1) < 0.35)
+if (random(1) < 0.45)
 {
 	if (x < room_width && !place_meeting(x + 16, y, objEntity))
 	{
@@ -15,7 +15,7 @@ if (random(1) < 0.35)
 	}
 }
 
-if (random(1) < 0.35)
+if (random(1) < 0.45)
 {
 	if (x > 0 && !place_meeting(x - 16, y, objEntity))
 	{

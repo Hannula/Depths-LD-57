@@ -4,9 +4,10 @@ xpNeeded = 12;
 xpGiven = 3;
 nextLevelCharacter = objLizard3;
 
-hp = 15;
-maxHp = 15;
-hpPrevious = 15;
+hp = 22;
+maxHp = hp;
+hpPrevious = hp;
+
 
 spd = 0.15;
 
@@ -23,7 +24,7 @@ attackCooldown = 300;
 canAttackTimer = 60;
 attackChance = 40;
 attackObject = objAcidProjectile;
-attackDmg = 4;
+attackDmg = 3;
 attackRange = 150;
 attackSpeed = 3;
 attackSpread = 5;

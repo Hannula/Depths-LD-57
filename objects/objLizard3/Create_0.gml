@@ -3,9 +3,10 @@ event_inherited();
 xpNeeded = 12;
 xpGiven = 4;
 
-hp = 30;
-maxHp = 30;
-hpPrevious = 30;
+hp = 40;
+maxHp = hp;
+hpPrevious = hp;
+
 
 spd = 0.15;
 
@@ -22,7 +23,7 @@ attackCooldown = 300;
 canAttackTimer = 60;
 attackChance = 40;
 attackObject = objAcidProjectile;
-attackDmg = 7;
+attackDmg = 4;
 attackRange = 150;
 attackSpeed = 3;
 attackSpread = 5;

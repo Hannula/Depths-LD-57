@@ -4,7 +4,8 @@ event_inherited();
 enum TEAM
 {
 	Player,
-	Enemy
+	Enemy,
+	Independent
 }
 
 lavaHurtChance = 30;

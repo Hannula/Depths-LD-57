@@ -162,9 +162,5 @@ function SpawnEnemies()
 		}
 		
 	}
-	
-	if (objLevel.difficulty == objLevel.finalLevelDifficulty)
-	{
-		instance_create_depth(room_width * 0.5, objLevel.roomHeight + 160, 0, objDragon);	
-	}
+
 }

@@ -34,20 +34,21 @@ function GenerateCrypt()
 		}
 	}
 	
-		repeat(10)
-		{
-			var xx = irandom(room_width / cellSize);
-			var yy = irandom_range(3, room_height / cellSize);
+	// Props
+	repeat(10)
+	{
+		var xx = irandom(room_width);
+		var yy = irandom_range(50, room_height);
 	
-			var spawnX = xx * cellSize;
-			var spawnY = yy * cellSize + objLevel.roomHeight;
-			if (!collision_point(spawnX, spawnY, objEntity, false, true))
-			{
-				var p = instance_create_depth(spawnX, spawnY, 0, objProp);
-				p.sprite_index = sprPropsCatacombs;
-				p.image_index = irandom(1000);
-			}
+		var spawnX = xx;
+		var spawnY = yy  + objLevel.roomHeight;
+		if (!collision_point(spawnX, spawnY, objEntity, false, true))
+		{
+			var p = instance_create_depth(spawnX, spawnY, 0, objProp);
+			p.sprite_index = sprPropsCatacombs;
+			p.image_index = irandom(1000);
 		}
+	}
 	
 	if (objLevel.difficulty == objLevel.finalLevelDifficulty +1)
 	{
@@ -93,7 +94,7 @@ function SpawnEnemiesCrypt()
 				{
 					enemy = choose(objSkeleton2, objGoblin2, objMinotaur1, objLizard1, objBatilisk1, objBogslium1);
 				}
-				quota -= 1;
+				quota -= 2;
 			}
 		}
 		
@@ -102,7 +103,7 @@ function SpawnEnemiesCrypt()
 			if (irandom(max(1, 120 / difficulty)) == 1)
 			{
 				enemy = choose(elite2, elite2, elite2, elite2, elite2, elite2, elite2, elite2, objMinotaur2, objGoblin3, objArcher2, objSkeleton3, objLizard2, objBatilisk2, objBogslium2);
-				quota -= 2;
+				quota -= 3;
 			}
 		}
 		

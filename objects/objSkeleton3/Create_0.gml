@@ -3,9 +3,9 @@ event_inherited();
 xpNeeded = 10;
 xpGiven = 3;
 
-hp = 18;
-maxHp = 18;
-hpPrevious = 18;
+hp = 32;
+maxHp = hp;
+hpPrevious = hp;
 
 spd = 0.3;
 
@@ -20,7 +20,7 @@ preferredDistance = 10;
 
 attackCooldown = 60;
 canAttackTimer = 60;
-attackChance = 60;
+attackChance = 30;
 attackObject = objAttack;
 attackDmg = 5;
 attackRange = 30;

@@ -14,8 +14,8 @@
     "path":"folders/Objects/Environment.yy",
   },
   "parentObjectId":{
-    "name":"objEntity",
-    "path":"objects/objEntity/objEntity.yy",
+    "name":"objWall",
+    "path":"objects/objWall/objWall.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

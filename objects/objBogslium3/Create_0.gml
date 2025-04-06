@@ -3,9 +3,9 @@ event_inherited();
 xpNeeded = 15;
 xpGiven = 6;
 
-hp = 60;
-maxHp = 60;
-hpPrevious = 60;
+hp = 100;
+maxHp = hp;
+hpPrevious = hp;
 
 waterSpeed = 0.5;
 lavaSpeed = 0.5;

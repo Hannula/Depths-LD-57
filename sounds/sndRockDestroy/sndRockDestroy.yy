@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"sndRockDestroy.wav",
   "type":0,
-  "volume":0.48,
+  "volume":0.35,
 }

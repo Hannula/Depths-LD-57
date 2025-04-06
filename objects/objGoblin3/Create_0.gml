@@ -3,9 +3,9 @@ event_inherited();
 xpNeeded = 10;
 xpGiven = 3;
 
-hp = 12;
-maxHp = 12;
-hpPrevious = 12;
+hp = 18;
+maxHp = hp;
+hpPrevious = hp;
 
 spd = 0.4;
 

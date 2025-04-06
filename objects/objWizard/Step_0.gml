@@ -97,7 +97,7 @@ if (canMove)
 		if (mana >= shotManacost)
 		{
 			mana -= shotManacost;
-			regenDelay = 120;
+			regenDelay = 80;
 			audio_play_sound(sndMagicSpell, 0.4, false, 1, 0, random_range(0.9, 1.1));
 			instance_create_depth(x, y, depth - 1, objMagicBolt);
 			sprite_index = sprWizardFire;

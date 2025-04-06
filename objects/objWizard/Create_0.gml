@@ -1,10 +1,10 @@
 canMove = true;
 friction = 0.1;
 
-mana = 100;
-maxMana = 100;
+mana = 70;
+maxMana = 70;
 shotManacost = 10;
-manaRegen = 40 / 60;
+manaRegen = 60 / 60;
 regenDelay = 0;
 manaDraw = 0;
 canBeHurt = true;

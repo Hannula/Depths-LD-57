@@ -9,7 +9,7 @@ enum BIOME
 	TreasureRoom
 }
 
-currentBiome = BIOME.Crypt;
+currentBiome = BIOME.Cavern;
 
 movingScreen = false;
 clickSafeBuffer = 60;
@@ -20,9 +20,9 @@ goldPitch = 0;
 goldTimer = 0;
 totalGoldCollected = 0;
 difficulty = 1;
-finalLevelDifficulty = 30;
+finalLevelDifficulty = 20;
 
-firepower = 2;
+firepower = 3;
 
 MoveScreen = function()
 {
@@ -35,6 +35,16 @@ MoveScreen = function()
 	levelPhase = LEVEL_PHASE.ScreenMoving;
 	
 	difficulty += 1;
+	
+	if (difficulty > 3)
+	{
+		currentBiome = choose(BIOME.Cavern, BIOME.Crypt, BIOME.Swamp, BIOME.Inferno);
+	}
+	if (difficulty == finalLevelDifficulty || difficulty == finalLevelDifficulty + 1)
+	{
+		currentBiome = BIOME.DragonsLair;	
+	}
+	
 	SpawnNextRoom();
 	
 	with(objWizard)
@@ -88,9 +98,13 @@ OpenShop = function()
 	if (levelPhase != LEVEL_PHASE.Cleared)
 		return;
 	
-	if (currentBiome == BIOME.Crypt)
+	switch(currentBiome)
 	{
-		SpawnShopCrypt();		
+		case BIOME.Crypt: SpawnShopCrypt(); break;
+		case BIOME.Swamp: SpawnShopSwamp(); break;
+		case BIOME.Inferno: SpawnShopInferno(); break;
+		case BIOME.Cavern: SpawnShopCavern(); break;
+		case BIOME.DragonsLair: SpawnShopDragonsLair(); break;
 	}
 	
 	levelPhase = LEVEL_PHASE.Shopping;
@@ -110,12 +124,14 @@ EndGame = function()
 
 SpawnNextRoom = function()
 {
-	if (currentBiome == BIOME.Crypt)
+	switch(currentBiome)
 	{
-		GenerateCrypt();
-		return;
+		case BIOME.Crypt: GenerateCrypt(); break;
+		case BIOME.Swamp: GenerateSwamp(); break;
+		case BIOME.Inferno: GenerateInferno(); break;
+		case BIOME.Cavern: GenerateCavern(); break;
+		case BIOME.DragonsLair: GenerateDragonsLair(); break;
 	}
-	GenerateLevel();
 }
 
 cursorImage = 0;

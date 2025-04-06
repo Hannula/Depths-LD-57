@@ -4,9 +4,10 @@ xpNeeded = 8;
 xpGiven = 2;
 nextLevelCharacter = objLizard2;
 
-hp = 7;
-maxHp = 7;
-hpPrevious = 7;
+hp = 12;
+maxHp = hp;
+hpPrevious = hp;
+
 
 spd = 0.15;
 

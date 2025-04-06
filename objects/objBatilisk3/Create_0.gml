@@ -3,9 +3,9 @@ event_inherited();
 xpNeeded = 15;
 xpGiven = 5;
 
-hp = 13;
-maxHp = 13;
-hpPrevious = 13;
+hp = 28;
+maxHp = hp;
+hpPrevious = hp;
 
 avoidedObstacle = objWall;
 isFlying = true;
@@ -45,4 +45,4 @@ bloodColor = #7b234c;
 pushedChance = 8;
 pushAmount = 0.7;
 
-goldAmount = 4;
+goldAmount = 7;

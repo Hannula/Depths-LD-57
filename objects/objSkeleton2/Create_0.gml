@@ -4,10 +4,9 @@ xpNeeded = 8;
 xpGiven = 2;
 nextLevelCharacter = objSkeleton3;
 
-
-hp = 12;
-maxHp = 12;
-hpPrevious = 12;
+hp = 18;
+maxHp = hp;
+hpPrevious = hp;
 
 spd = 0.3;
 
@@ -22,7 +21,7 @@ preferredDistance = 10;
 
 attackCooldown = 60;
 canAttackTimer = 60;
-attackChance = 60;
+attackChance = 30;
 attackObject = objAttack;
 attackDmg = 3;
 attackRange = 30;

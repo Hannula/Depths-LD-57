@@ -4,9 +4,9 @@ xpNeeded = 6;
 xpGiven = 1;
 nextLevelCharacter = objArcher2;
 
-hp = 3;
-maxHp = 3;
-hpPrevious = 3;
+hp = 7;
+maxHp = hp;
+hpPrevious = hp;
 
 spd = 0.15;
 
@@ -22,7 +22,7 @@ preferredDistance = 70;
 attackCooldown = 140;
 canAttackTimer = 60;
 attackChance = 60;
-attackObject = objAttack;
+attackObject = objProjectile;
 attackDmg = 2;
 attackRange = 120;
 attackSpeed = 8;
