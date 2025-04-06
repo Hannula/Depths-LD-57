@@ -142,9 +142,18 @@ Attack = function(dir)
 
 Die = function()
 {
-	repeat(goldAmount)
+	while(goldAmount > 0)
 	{
-		instance_create_depth(x, y, depth, objGoldNugget);
+		var g = instance_create_depth(x, y, depth, objGoldNugget);
+		if (goldAmount >= 3)
+		{
+			g.amount = 30;
+			goldAmount -= 3;
+		}
+		else
+		{
+			goldAmount -= 1;
+		}
 	}
 }
 

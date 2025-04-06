@@ -4,6 +4,9 @@ if (team == TEAM.Player)
 	//hpBarColor = #4d6659;
 
 	goldAmount = 0;
+	hp *= 1.5;
+	maxHp = hp;
+	hpPrevious = hp;
 }
 else
 {

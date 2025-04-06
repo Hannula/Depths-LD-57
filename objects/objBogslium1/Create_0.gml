@@ -1,6 +1,6 @@
 event_inherited();
 
-xpNeeded = 8;
+xpNeeded = 5;
 xpGiven = 2;
 nextLevelCharacter = objBogslium2;
 

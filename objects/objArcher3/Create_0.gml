@@ -3,7 +3,7 @@ event_inherited();
 xpNeeded = 12;
 xpGiven = 3;
 
-hp = 22;
+hp = 28;
 maxHp = hp;
 hpPrevious = hp;
 
@@ -19,11 +19,11 @@ targetingChance = 50;
 movementTargetChance = 30;
 preferredDistance = 90;
 
-attackCooldown = 100;
+attackCooldown = 80;
 canAttackTimer = 60;
 attackChance = 20;
 attackObject = objProjectile;
-attackDmg = 2;
+attackDmg = 3;
 attackRange = 160;
 attackSpeed = 11;
 attackSpread = 5;
@@ -43,4 +43,4 @@ bloodColor = #7b234c;
 pushedChance = 5;
 pushAmount = 0.4;
 
-goldAmount = 3;
+goldAmount = 8;

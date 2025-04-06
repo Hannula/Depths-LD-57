@@ -3,7 +3,7 @@ event_inherited();
 xpNeeded = 15;
 xpGiven = 6;
 
-hp = 100;
+hp = 120;
 maxHp = hp;
 hpPrevious = hp;
 
@@ -24,7 +24,7 @@ attackCooldown = 150;
 canAttackTimer = 60;
 attackChance = 30;
 attackObject = objShockwave;
-attackDmg = 1;
+attackDmg = 3;
 attackRange = 60;
 attackSpeed = 0;
 attackSpread = 0;
@@ -45,7 +45,7 @@ bloodColor = #7b234c;
 pushedChance = 10;
 pushAmount = 0.8;
 
-goldAmount = 8;
+goldAmount = 10;
 
 TakeDamage = function(dmg)
 {

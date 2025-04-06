@@ -23,7 +23,7 @@ attackCooldown = 60;
 canAttackTimer = 60;
 attackChance = 30;
 attackObject = objAttack;
-attackDmg = 3;
+attackDmg = 4;
 attackRange = 30;
 attackSpeed = 3.1;
 attackSpread = 10;
@@ -41,4 +41,4 @@ bloodColor = #7b234c;
 pushedChance = 5;
 pushAmount = 0.5;
 
-goldAmount = 3;
+goldAmount = 4;

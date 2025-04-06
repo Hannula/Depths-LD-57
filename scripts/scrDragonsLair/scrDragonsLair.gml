@@ -73,9 +73,22 @@ function GenerateDragonsLair()
 
 function SpawnEnemiesDragonsLair()
 {
-	instance_create_depth(room_width * 0.5, objLevel.roomHeight + 160, 0, objDragon);	
+	var numDragons = floor(1 + (objLevel.difficulty - objLevel.finalLevelDifficulty) * 0.25);
+	var leftX = room_width * 0.5;
+	var gap = 0;
 	
-	var quota = power(1 + difficulty, 1.35);
+	if (numDragons > 1)
+	{
+		leftX = 60;
+		gap = (room_width - leftX * 2) / (numDragons - 1); 
+	}
+	
+	for(var i = 0; i < numDragons; i++)
+	{
+		instance_create_depth(leftX + gap * i + random_range(-10, 10), 160 + objLevel.roomHeight - irandom(30), 0, objDragon);
+	}
+	
+	var quota = power(difficulty, 1.35);
 	var baseEnemy = choose(objSkeleton2, objSkeleton2, objSkeleton2);
 	var elite1 = choose(objSkeleton3, objSkeleton2, objMinotaur1, objLizard1);
 	
@@ -98,7 +111,7 @@ function SpawnEnemiesDragonsLair()
 		}
 		
 		var xx = random_range(20, room_width - 20);
-		var yy = random_range(80, 170) + roomHeight;
+		var yy = random_range(110, 170) + roomHeight;
 		repeat(70)
 		{
 			if (!collision_circle(xx, yy, 6, objObstacleSmartAvoid, false, true))
@@ -107,7 +120,7 @@ function SpawnEnemiesDragonsLair()
 				break;
 			}
 			xx = random_range(30, room_width - 30);
-			yy = random_range(80, 120) + roomHeight;
+			yy = random_range(80, 170) + roomHeight;
 		}
 	}
 }

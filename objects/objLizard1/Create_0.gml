@@ -1,7 +1,7 @@
 event_inherited();
 
-xpNeeded = 8;
-xpGiven = 2;
+xpNeeded = 5;
+xpGiven = 1;
 nextLevelCharacter = objLizard2;
 
 hp = 12;
@@ -44,4 +44,4 @@ bloodColor = #7b234c;
 pushedChance = 5;
 pushAmount = 0.4;
 
-goldAmount = 1;
+goldAmount = 2;

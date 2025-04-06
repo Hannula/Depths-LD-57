@@ -4,6 +4,6 @@ icon = sprMinotaur2;
 
 name = "Minotaur\nGuard";
 
-cost = 250;
+cost = 600;
 amount = 1;
 unit = objMinotaur2;

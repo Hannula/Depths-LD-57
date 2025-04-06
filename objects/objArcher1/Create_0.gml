@@ -1,6 +1,6 @@
 event_inherited();
 
-xpNeeded = 6;
+xpNeeded = 4;
 xpGiven = 1;
 nextLevelCharacter = objArcher2;
 

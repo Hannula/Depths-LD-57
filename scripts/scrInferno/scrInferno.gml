@@ -84,7 +84,7 @@ function SpawnEnemiesInferno()
 		
 		if (difficulty > 2)
 		{
-			if (irandom(max(0, 50 / difficulty)) == 0)
+			if (irandom(max(0, 30 / difficulty)) == 0)
 			{
 				enemy = choose(elite1, elite1, elite1, elite1, objSkeleton3, objSkeleton3, objBatilisk2, objMinotaur2);
 				if (irandom(100) == 1)
@@ -97,7 +97,7 @@ function SpawnEnemiesInferno()
 		
 		if (difficulty > 4)
 		{
-			if (irandom(max(1, 120 / difficulty)) == 1)
+			if (irandom(max(1, 90 / difficulty)) == 1)
 			{
 				enemy = choose(elite2, elite2, elite2, elite2, elite2, objMinotaur3, objBatilisk3);
 				quota -= 4;
@@ -105,7 +105,7 @@ function SpawnEnemiesInferno()
 		}
 		
 		var xx = random_range(30, room_width - 30);
-		var yy = random_range(80, 170) + roomHeight;
+		var yy = random_range(110, 170) + roomHeight;
 		repeat(50)
 		{
 			if (!collision_circle(xx, yy, 6, objObstacleSmartAvoid, false, true))
@@ -114,7 +114,7 @@ function SpawnEnemiesInferno()
 				break;
 			}
 			xx = random_range(30, room_width - 30);
-			yy = random_range(80, 120) + roomHeight;
+			yy = random_range(80, 170) + roomHeight;
 		}
 	}
 }

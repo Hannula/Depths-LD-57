@@ -4,6 +4,6 @@ icon = sprGoblin2;
 
 name = "Goblin\nWarrior";
 
-cost = 80;
+cost = 200;
 amount = 1;
 unit = objGoblin2;

@@ -4,6 +4,6 @@ icon = sprLizardMonk;
 
 name = "Lizard\nApprentice";
 
-cost = 80;
+cost = 120;
 amount = 1;
 unit = objLizard1;

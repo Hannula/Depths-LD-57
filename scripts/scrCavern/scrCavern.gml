@@ -86,7 +86,7 @@ function GenerateCavern()
 
 function SpawnEnemiesCavern()
 {
-	var quota = power(1 + difficulty, 1.35);
+	var quota = power(difficulty, 1.35);
 	var baseEnemy = choose(objSkeleton1, objGoblin1);
 	var elite1 = choose(objSkeleton2, objMinotaur1, objArcher2, objGoblin2, objGoblin2, objGoblin2);
 	var elite2 = choose(objSkeleton3, objMinotaur2, objArcher3, objGoblin3, objGoblin3, objGoblin3);
@@ -98,7 +98,7 @@ function SpawnEnemiesCavern()
 		
 		if (difficulty > 2)
 		{
-			if (irandom(max(0, 40 / difficulty)) == 0)
+			if (irandom(max(0, 30 / difficulty)) == 0)
 			{
 				enemy = choose(elite1, elite1, elite1, elite1, elite1, elite1, elite1, elite1, elite1, objMinotaur1, objLizard1, objBatilisk1, objGoblin2, objGoblin2);
 				if (irandom(100) == 1)
@@ -111,15 +111,15 @@ function SpawnEnemiesCavern()
 		
 		if (difficulty > 4)
 		{
-			if (irandom(max(1, 90 / difficulty)) == 1)
+			if (irandom(max(1, 60 / difficulty)) == 1)
 			{
 				enemy = choose(elite2, elite2, elite2, elite2, elite2, elite2, elite2, elite2, objMinotaur2, objBatilisk1, objSkeleton3, objGoblin3, objGoblin3);
-				quota -= 5;
+				quota -= 4;
 			}
 		}
 		
 		var xx = random_range(30, room_width - 30);
-		var yy = random_range(80, 170) + roomHeight;
+		var yy = random_range(110, 170) + roomHeight;
 		repeat(50)
 		{
 			if (!collision_circle(xx, yy, 6, objObstacleSmartAvoid, false, true))
@@ -128,7 +128,7 @@ function SpawnEnemiesCavern()
 				break;
 			}
 			xx = random_range(30, room_width - 30);
-			yy = random_range(80, 120) + roomHeight;
+			yy = random_range(80, 170) + roomHeight;
 		}
 	}
 }

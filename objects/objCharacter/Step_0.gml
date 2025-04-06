@@ -2,6 +2,8 @@ event_inherited();
 depth = -y;
 y = max(y, 20);
 
+x = clamp(x, 16, room_width - 16);
+
 if (team == TEAM.Player)
 {
 	if (objLevel.levelPhase != LEVEL_PHASE.Battle)

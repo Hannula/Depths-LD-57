@@ -1,7 +1,7 @@
 event_inherited();
 
-xpNeeded = 8;
-xpGiven = 2;
+xpNeeded = 5;
+xpGiven = 1;
 nextLevelCharacter = objBatilisk2;
 
 avoidedObstacle = objWall;

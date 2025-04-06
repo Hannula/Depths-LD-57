@@ -12,6 +12,8 @@ lavaSpeed = 0.9;
 spd = 0.4;
 isFlying = true;
 
+avoidedObstacle = noone;
+
 knockbackMultiplier = 0.15;
 friction = 0.1;
 
@@ -19,13 +21,13 @@ team = TEAM.Enemy;
 
 targetingChance = 30;
 movementTargetChance = 30;
-preferredDistance = 90;
+preferredDistance = random_range(40, 90);
 
-attackCooldown = 120;
+attackCooldown = max(20, 80 - objLevel.difficulty);
 canAttackTimer = 60;
 attackChance = 20;
 attackObject = objAttack;
-attackDmg = 6;
+attackDmg = 10;
 attackRange = 120;
 attackSpeed = 7;
 attackSpread = 10;

@@ -1,7 +1,7 @@
 event_inherited();
 
-xpNeeded = 10;
-xpGiven = 4;
+xpNeeded = 5;
+xpGiven = 2;
 nextLevelCharacter = objMinotaur2;
 
 waterSpeed = 0.9;
@@ -47,4 +47,4 @@ bloodColor = #7b234c;
 pushedChance = 10;
 pushAmount = 0.8;
 
-goldAmount = 8;
+goldAmount = 4;

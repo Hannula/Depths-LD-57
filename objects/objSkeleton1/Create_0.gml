@@ -1,6 +1,6 @@
 event_inherited();
 
-xpNeeded = 5;
+xpNeeded = 3;
 xp = 0;
 xpGiven = 1;
 nextLevelCharacter = objSkeleton2;

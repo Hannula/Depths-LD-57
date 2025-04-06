@@ -1,6 +1,6 @@
 event_inherited();
 
-xpNeeded = 15;
+xpNeeded = 10;
 xpGiven = 3;
 nextLevelCharacter = objBatilisk3;
 

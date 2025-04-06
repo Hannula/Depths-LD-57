@@ -4,6 +4,6 @@ icon = sprOrcArcher;
 
 name = "Orc";
 
-cost = 50;
+cost = 80;
 amount = 1;
 unit = objArcher1;

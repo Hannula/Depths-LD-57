@@ -3,7 +3,7 @@ event_inherited();
 xpNeeded = 10;
 xpGiven = 3;
 
-hp = 18;
+hp = 24;
 maxHp = hp;
 hpPrevious = hp;
 
@@ -16,7 +16,7 @@ team = TEAM.Enemy;
 
 targetingChance = 30;
 movementTargetChance = 20;
-preferredDistance = 40;
+preferredDistance = 32;
 
 attackCooldown = 60;
 canAttackTimer = 60;
@@ -42,4 +42,4 @@ bloodColor = #7b234c;
 pushedChance = 5;
 pushAmount = 0.5;
 
-goldAmount = 4;
+goldAmount = 10;

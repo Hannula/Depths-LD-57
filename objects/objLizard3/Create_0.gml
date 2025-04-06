@@ -1,7 +1,7 @@
 event_inherited();
 
 xpNeeded = 12;
-xpGiven = 4;
+xpGiven = 3;
 
 hp = 40;
 maxHp = hp;
@@ -23,7 +23,7 @@ attackCooldown = 300;
 canAttackTimer = 60;
 attackChance = 40;
 attackObject = objAcidProjectile;
-attackDmg = 4;
+attackDmg = 7;
 attackRange = 150;
 attackSpeed = 3;
 attackSpread = 5;
@@ -43,4 +43,4 @@ bloodColor = #7b234c;
 pushedChance = 5;
 pushAmount = 0.4;
 
-goldAmount = 4;
+goldAmount = 10;

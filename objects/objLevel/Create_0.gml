@@ -44,6 +44,13 @@ MoveScreen = function()
 	{
 		currentBiome = BIOME.DragonsLair;	
 	}
+	if (difficulty > finalLevelDifficulty + 2)
+	{
+		if (irandom(4) == 1)
+		{
+			currentBiome = BIOME.DragonsLair;
+		}
+	}
 	
 	SpawnNextRoom();
 	

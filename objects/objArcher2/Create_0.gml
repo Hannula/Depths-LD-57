@@ -1,6 +1,6 @@
 event_inherited();
 
-xpNeeded = 12;
+xpNeeded = 10;
 xpGiven = 2;
 nextLevelCharacter = objArcher3;
 
@@ -44,4 +44,4 @@ bloodColor = #7b234c;
 pushedChance = 5;
 pushAmount = 0.4;
 
-goldAmount = 2;
+goldAmount = 4;

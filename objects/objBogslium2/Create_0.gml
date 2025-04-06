@@ -1,10 +1,10 @@
 event_inherited();
 
-xpNeeded = 15;
+xpNeeded = 10;
 xpGiven = 3;
 nextLevelCharacter = objBogslium3;
 
-hp = 50;
+hp = 70;
 maxHp = hp;
 hpPrevious = hp;
 
@@ -25,7 +25,7 @@ attackCooldown = 200;
 canAttackTimer = 60;
 attackChance = 30;
 attackObject = objShockwave;
-attackDmg = 1;
+attackDmg = 2;
 attackRange = 60;
 attackSpeed = 0;
 attackSpread = 0;
@@ -46,7 +46,7 @@ bloodColor = #7b234c;
 pushedChance = 10;
 pushAmount = 0.8;
 
-goldAmount = 5;
+goldAmount = 6;
 
 TakeDamage = function(dmg)
 {

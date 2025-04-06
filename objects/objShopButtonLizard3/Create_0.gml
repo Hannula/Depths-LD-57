@@ -4,6 +4,6 @@ icon = sprLizardMonk3;
 
 name = "Lizard\nArchmage";
 
-cost = 800;
+cost = 1100;
 amount = 1;
 unit = objLizard3;

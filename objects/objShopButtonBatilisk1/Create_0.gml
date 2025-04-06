@@ -4,6 +4,6 @@ icon = sprBatilisk1;
 
 name = "Baby\nBatilisk";
 
-cost = 70;
+cost = 100;
 amount = 1;
 unit = objBatilisk1;

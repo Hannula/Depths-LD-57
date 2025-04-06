@@ -1,10 +1,10 @@
 event_inherited();
 
-xpNeeded = 12;
+xpNeeded = 10;
 xpGiven = 2;
 nextLevelCharacter = objGoblin3;
 
-hp = 11;
+hp = 13;
 maxHp = hp;
 hpPrevious = hp;
 
@@ -17,7 +17,7 @@ team = TEAM.Enemy;
 
 targetingChance = 30;
 movementTargetChance = 20;
-preferredDistance = 40;
+preferredDistance = 32;
 
 attackCooldown = 60;
 canAttackTimer = 60;
@@ -43,4 +43,4 @@ bloodColor = #7b234c;
 pushedChance = 5;
 pushAmount = 0.5;
 
-goldAmount = 2;
+goldAmount = 5;

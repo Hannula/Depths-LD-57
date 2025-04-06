@@ -1,6 +1,6 @@
 event_inherited();
 
-xpNeeded = 6;
+xpNeeded = 5;
 xpGiven = 1;
 nextLevelCharacter = objGoblin2;
 
@@ -17,7 +17,7 @@ team = TEAM.Enemy;
 
 targetingChance = 30;
 movementTargetChance = 20;
-preferredDistance = 40;
+preferredDistance = 32;
 
 attackCooldown = 60;
 canAttackTimer = 60;

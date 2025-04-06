@@ -1,11 +1,11 @@
 event_inherited();
 
 xpNeeded = 10;
-xpGiven = 6;
+xpGiven = 4;
 
-hp = 70;
-maxHp = 70;
-hpPrevious = 70;
+hp = 90;
+maxHp = 90;
+hpPrevious = 90;
 
 waterSpeed = 0.9;
 lavaSpeed = 0.9;
@@ -24,7 +24,7 @@ attackCooldown = 150;
 canAttackTimer = 60;
 attackChance = 30;
 attackObject = objAttack;
-attackDmg = 6;
+attackDmg = 7;
 attackRange = 30;
 attackSpeed = 3.3;
 attackSpread = 10;
@@ -46,4 +46,4 @@ bloodColor = #7b234c;
 pushedChance = 10;
 pushAmount = 0.8;
 
-goldAmount = 8;
+goldAmount = 12;

@@ -1,12 +1,12 @@
 event_inherited();
 
-xpNeeded = 15;
-xpGiven = 4;
+xpNeeded = 10;
+xpGiven = 3;
 nextLevelCharacter = objMinotaur3;
 
-hp = 30;
-maxHp = 30;
-hpPrevious = 20;
+hp = 38;
+maxHp = 38;
+hpPrevious = 38;
 
 waterSpeed = 0.9;
 lavaSpeed = 0.9;
@@ -25,7 +25,7 @@ attackCooldown = 170;
 canAttackTimer = 60;
 attackChance = 30;
 attackObject = objAttack;
-attackDmg = 4;
+attackDmg = 5;
 attackRange = 30;
 attackSpeed = 3.3;
 attackSpread = 10;
@@ -47,4 +47,4 @@ bloodColor = #7b234c;
 pushedChance = 10;
 pushAmount = 0.8;
 
-goldAmount = 8;
+goldAmount = 7;

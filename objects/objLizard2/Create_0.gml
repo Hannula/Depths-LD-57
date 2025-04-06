@@ -1,10 +1,10 @@
 event_inherited();
 
-xpNeeded = 12;
-xpGiven = 3;
+xpNeeded = 10;
+xpGiven = 2;
 nextLevelCharacter = objLizard3;
 
-hp = 22;
+hp = 24;
 maxHp = hp;
 hpPrevious = hp;
 
@@ -24,7 +24,7 @@ attackCooldown = 300;
 canAttackTimer = 60;
 attackChance = 40;
 attackObject = objAcidProjectile;
-attackDmg = 3;
+attackDmg = 4;
 attackRange = 150;
 attackSpeed = 3;
 attackSpread = 5;
@@ -44,4 +44,4 @@ bloodColor = #7b234c;
 pushedChance = 5;
 pushAmount = 0.4;
 
-goldAmount = 2;
+goldAmount = 5;

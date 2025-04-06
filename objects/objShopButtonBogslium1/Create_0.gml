@@ -4,6 +4,6 @@ icon = sprBogslium1;
 
 name = "Small\nBogslime";
 
-cost = 100;
+cost = 150;
 amount = 1;
 unit = objBogslium1;

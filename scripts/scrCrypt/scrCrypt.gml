@@ -75,21 +75,21 @@ function GenerateCrypt()
 
 function SpawnEnemiesCrypt()
 {
-	var quota = power(1 + difficulty, 1.35);
-	var baseEnemy = choose(objSkeleton1, objSkeleton1);
-	var elite1 = choose(objSkeleton2, objSkeleton2, objMinotaur1, objLizard1);
-	var elite2 = choose(objSkeleton3, objSkeleton3, objSkeleton3);
+	var quota = power(difficulty, 1.35);
+	var baseEnemy = choose(objSkeleton1, objSkeleton1, objGhost1);
+	var elite1 = choose(objSkeleton2, objSkeleton2, objMinotaur1, objLizard1, objGhost2);
+	var elite2 = choose(objSkeleton3, objSkeleton3, objSkeleton3, objGhost3);
 	
 	while(quota > 0)
 	{
 		quota -= 1;
-		var enemy = choose(baseEnemy, baseEnemy, baseEnemy, baseEnemy, baseEnemy, baseEnemy, baseEnemy, objSkeleton1, objGoblin1, objArcher1, objSkeleton1, objGoblin1, objArcher1, objLizard1);
+		var enemy = choose(baseEnemy, baseEnemy, baseEnemy, baseEnemy, baseEnemy, baseEnemy, baseEnemy, objGhost1, objSkeleton1, objGhost1, objSkeleton1, objGoblin1, objArcher1, objLizard1);
 		
 		if (difficulty > 2)
 		{
-			if (irandom(max(0, 50 / difficulty)) == 0)
+			if (irandom(max(0, 30 / difficulty)) == 0)
 			{
-				enemy = choose(elite1, elite1, elite1, elite1, elite1, elite1, elite1, elite1, objMinotaur1, objLizard1, objBatilisk1);
+				enemy = choose(elite1, elite1, elite1, elite1, elite1, elite1, elite1, elite1, objMinotaur1, objLizard1, objBatilisk1, objGhost2, objSkeleton2 );
 				if (irandom(100) == 1)
 				{
 					enemy = choose(objSkeleton2, objGoblin2, objMinotaur1, objLizard1, objBatilisk1, objBogslium1);
@@ -102,13 +102,13 @@ function SpawnEnemiesCrypt()
 		{
 			if (irandom(max(1, 120 / difficulty)) == 1)
 			{
-				enemy = choose(elite2, elite2, elite2, elite2, elite2, elite2, elite2, elite2, objMinotaur2, objGoblin3, objArcher2, objSkeleton3, objLizard2, objBatilisk2, objBogslium2);
+				enemy = choose(elite2, elite2, elite2, elite2, elite2, elite2, elite2, elite2, objGhost3, objMinotaur2, objGoblin3, objArcher3, objSkeleton3, objLizard2, objBatilisk2, objBogslium2);
 				quota -= 3;
 			}
 		}
 		
 		var xx = random_range(30, room_width - 30);
-		var yy = random_range(80, 170) + roomHeight;
+		var yy = random_range(110, 170) + roomHeight;
 		repeat(50)
 		{
 			if (!collision_circle(xx, yy, 6, objObstacleSmartAvoid, false, true))
@@ -117,7 +117,7 @@ function SpawnEnemiesCrypt()
 				break;
 			}
 			xx = random_range(30, room_width - 30);
-			yy = random_range(80, 120) + roomHeight;
+			yy = random_range(80, 170) + roomHeight;
 		}
 	}
 }
@@ -129,12 +129,13 @@ function SpawnShopCrypt()
 	var leftX = room_width * 0.5 - items * 0.5 * gap + gap * 0.5;
 	for(var i = 0; i < items; i++)
 	{
-		var itemType = choose(objShopButton, objShopButton, objShopButton, objShopButtonSkeleton2);
+		var itemType = choose(objShopButton, objShopButtonGhost1);
 		var item = instance_create_depth(leftX + i * gap, 60, -1000, itemType);
 	}
 	for(var i = 0; i < items; i++)
 	{
-		var itemType = choose(objShopButtonSkeleton2, objShopButtonSkeleton2, objShopButtonSkeleton3);
+		var itemType = choose(objShopButtonSkeleton2, objShopButtonSkeleton2, objShopButtonSkeleton3,
+			objShopButtonGhost2, objShopButtonGhost2, objShopButtonGhost3);
 		if (i == items - 1)
 		{
 			itemType = objShopButtonInvest;
