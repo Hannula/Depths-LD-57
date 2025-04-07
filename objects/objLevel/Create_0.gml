@@ -46,7 +46,7 @@ MoveScreen = function()
 	}
 	if (difficulty > finalLevelDifficulty + 2)
 	{
-		if (irandom(4) == 1)
+		if (difficulty mod 4 == 0)
 		{
 			currentBiome = BIOME.DragonsLair;
 		}

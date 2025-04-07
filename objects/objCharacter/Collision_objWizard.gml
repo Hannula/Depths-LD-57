@@ -1,4 +1,16 @@
 if (team == TEAM.Enemy)
 {
-	other.TakeDamage();
+	var alliesExist = false;
+
+	with(objCharacter)
+	{
+		if (team == TEAM.Player)
+		{
+			alliesExist = true;
+			break;
+		}
+	}
+	
+	if (!alliesExist)
+		other.TakeDamage();
 }

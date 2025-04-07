@@ -20,6 +20,17 @@ if (keyboard_check(vk_control))
 				TakeDamage(1000);
 			}
 		}
+		
+	}
+	
+	if (keyboard_check_pressed(vk_pageup))
+	{
+		objLevel.difficulty += 1;
+	}
+	
+	if (keyboard_check_pressed(ord("G")))
+	{
+		objLevel.gold += 1000;
 	}
 	
 

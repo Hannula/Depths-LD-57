@@ -3,9 +3,9 @@ event_inherited();
 xpNeeded = 10;
 xpGiven = 6;
 
-hp = 600;
-maxHp = 600;
-hpPrevious = 600;
+hp = 400;
+maxHp = 400;
+hpPrevious = 400;
 
 waterSpeed = 0.9;
 lavaSpeed = 0.9;
@@ -23,15 +23,15 @@ targetingChance = 30;
 movementTargetChance = 30;
 preferredDistance = random_range(40, 90);
 
-attackCooldown = max(20, 80 - objLevel.difficulty);
+attackCooldown = max(20, 40 - objLevel.difficulty);
 canAttackTimer = 60;
-attackChance = 20;
+attackChance = 30;
 attackObject = objAttack;
 attackDmg = 10;
 attackRange = 120;
 attackSpeed = 7;
 attackSpread = 10;
-attackKnockback = 3.5;
+attackKnockback = 1.7;
 attackSound = sndAttack;
 attackSprite = sprAttackLarge;
 attackDamageReduction = 0.5;
